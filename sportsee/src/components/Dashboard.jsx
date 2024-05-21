@@ -13,6 +13,7 @@ import ActivityInfo from "./ActivityInfo";
 import AverageSessionsInfo from "./AverageSessionsInfo";
 import PerformanceInfo from "./PerformanceInfo";
 import ScoreInfo from "./ScoreInfo";
+import ResultatInfo from "./ResultatInfo";
 
 const Dashboard = () => {
   const { userId } = useParams();
@@ -78,14 +79,22 @@ const Dashboard = () => {
         <AsideNav />
         <div>
           <UserInfo user={data.user} />
+
           <div className="mainDashboard">
-            <ActivityInfo activity={data.activity.sessions} />
-            <div className='graphCarre'>
-            <AverageSessionsInfo averageSessions={data.averageSessions.sessions} />
-            <PerformanceInfo performance={data.performance.data} />
-            <ScoreInfo userId={userId} /> 
+            <div className="info">
+              <div>
+                <ActivityInfo activity={data.activity.sessions} />
+                <div className="graphCarre">
+                  <AverageSessionsInfo
+                    averageSessions={data.averageSessions.sessions}
+                  />
+                  <PerformanceInfo performance={data.performance.data} />
+                  <ScoreInfo userId={userId} />
+                </div>
+              </div>
+
+              <ResultatInfo userId={userId} />
             </div>
-           
           </div>
         </div>
       </div>

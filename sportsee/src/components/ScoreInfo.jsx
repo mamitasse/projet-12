@@ -39,7 +39,7 @@ const ScoreInfo = ({ userId }) => {
 
   return (
     <div className="score-info" style={{ width: '268px', height: '268px', position: 'relative' }}>
-      <h2 style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>Score</h2>
+      <p style={{ position: 'absolute', top: '5%', left: '5%', transform: 'translate(-50%, -50%)',fontWeight:'600' }}>Score</p>
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie
@@ -62,7 +62,7 @@ const ScoreInfo = ({ userId }) => {
             dominantBaseline="middle"
             className="score-text"
             fontSize="24"
-            fill="#000"
+            fill="#FF0000"
           >
             <tspan
               style={{
@@ -71,7 +71,7 @@ const ScoreInfo = ({ userId }) => {
                 fontWeight: 700,
                 lineHeight: '26px',
                 textAlign: 'center',
-                fill: '#FF0000',
+                fill: 'black',
               }}
             >
               {(score * 100).toFixed(0)}%

@@ -39,7 +39,7 @@ const AverageSessionsInfo = ({ averageSessions }) => {
   }));
 
   return (
-    <div style={{ width: '269px', height: '258px', backgroundColor: '#FF0000', padding: '10px' }}>
+    <div style={{ width: '279px', height: '283px', backgroundColor: '#FF0000', padding: '10px' }}>
       <h2 style={{ color: 'black', fontFamily: 'Roboto', fontSize: '15px', fontWeight: 'bold' ,color:'rgba(255, 255, 255, 0.8)'}}>Durée moyenne des <br /> sessions</h2>
       <ResponsiveContainer width="100%" height="80%">
         <LineChart data={formattedSessions} margin={{ top: 0, right: 3, left: 3, bottom: 20 }}>
