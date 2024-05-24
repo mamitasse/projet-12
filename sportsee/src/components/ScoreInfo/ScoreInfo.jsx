@@ -1,31 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
-import { getUserById } from '../api';
 
-const ScoreInfo = ({ userId }) => {
-  const [score, setScore] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        console.log("Fetching score data...");
-        const response = await getUserById(userId);
-        console.log("Score data:", response.data);
-        setScore(response.data.score);
-      } catch (error) {
-        console.error("Erreur lors de la récupération du score:", error);
-        setError("Les informations de score ne sont pas disponibles.");
-      }
-    };
-
-    fetchData();
-  }, [userId]);
-
-  if (error) {
-    return <div>{error}</div>;
-  }
-
+const ScoreInfo = ({ score }) => {
   if (score === null) {
     return <div>Chargement...</div>;
   }
@@ -39,7 +15,7 @@ const ScoreInfo = ({ userId }) => {
 
   return (
     <div className="score-info" style={{ width: '268px', height: '268px', position: 'relative' }}>
-      <p style={{ position: 'absolute', top: '5%', left: '5%', transform: 'translate(-50%, -50%)',fontWeight:'600' }}>Score</p>
+      <p style={{ position: 'absolute', top: '5%', left: '5%', transform: 'translate(-50%, -50%)', fontWeight: '600' }}>Score</p>
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>
           <Pie

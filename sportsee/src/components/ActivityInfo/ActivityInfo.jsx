@@ -52,7 +52,9 @@ const ActivityInfo = ({ activity }) => {
                 data={formattedActivity}
                 margin={{ top: 20, right: 30, left: 20, bottom: 5 }}
             >
-                <CartesianGrid strokeDasharray="3 3" />
+                <CartesianGrid strokeDasharray="3 3" 
+                  horizontal={true} // Activer les lignes horizontales
+                  vertical={false}/>
                 <XAxis dataKey="day" tickLine={false} axisLine={false} />
                 <YAxis
                     yAxisId="left"

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "../components/Header";
-import AsideNav from "./AsideNav";
+import Header from "../Header/Header";
+import AsideNav from "../AsideNav/AsideNav";
 
 const Home = () => {
   const [userId, setUserId] = useState("");

@@ -21,16 +21,18 @@ code {
 .Dashboard {
   display: flex;
   flex-direction: row;
+  gap: 30px;
 }
 
 .Dashboard h1 {
-  margin-left: 40px;
+  margin-left: 60px;
 }
 
 .mainDashboard {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  justify-content: space-around;
+  gap: 230px;
   margin-left: 40px;
 }
 
@@ -38,8 +40,19 @@ code {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   height: 500px;
   gap: 20px;
+}
+
+.activityInfo {
+  width: 835px;
+  height: 320px;
+  top: 325px;
+  left: 226px;
+  gap: 0px;
+  opacity: 0px;
+  margin-bottom: 30px;
 }
 
 .activityInfo p {
@@ -48,6 +61,10 @@ code {
   font-weight: 500;
   line-height: 24px;
   text-align: left;
+}
+
+.average {
+  margin-top: 30px;
 }
 
 .average h2 {
@@ -65,4 +82,15 @@ code {
 .info {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+}
+
+.resultat-item {
+  display: flex;
+  flex-direction: row;
+}
+
+ul {
+  padding: 0px;
 }

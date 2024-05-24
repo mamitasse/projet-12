@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/UserInfo.css';
+import './UserInfo.css';
 
 const UserInfo = ({ user }) => {
     console.log("User Info:", user);
