@@ -59,12 +59,13 @@ const AverageSessionsInfo = ({ averageSessions }) => {
               fontSize: 12,
               fontWeight: 500,
               lineHeight: '24px',
-              textAlign: 'left'
+              textAlign: 'left',
+              height:24
             }} 
             axisLine={false} 
             tickLine={false} 
-            tickMargin={1} // Add margin to ensure full visibility
-            padding={{ left: 1, right: 1 }} // Add padding to ensure visibility of first and last ticks
+            tickM argin={1} // Add margin to ensure full visibility
+            padding={{ left: 1, right: 1 }}// Add padding to ensure visibility of first and last ticks
           />
           <YAxis hide={true} />
           <Tooltip 

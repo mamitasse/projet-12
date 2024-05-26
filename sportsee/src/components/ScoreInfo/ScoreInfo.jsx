@@ -64,7 +64,20 @@ const ScoreInfo = ({ score }) => {
                 fill: '#000'
               }}
             >
-              de votre objectif
+              de votre 
+            </tspan>
+            <tspan
+              x="50%"
+              dy="1.2em"
+              style={{
+                fontFamily: 'Roboto',
+                fontSize: '16px',
+                fontWeight: 500,
+                lineHeight: '26px',
+                textAlign: 'center',
+                fill: '#000'
+              }}
+            >objectif
             </tspan>
           </text>
         </PieChart>

@@ -42,7 +42,7 @@ const ActivityInfo = ({ activity }) => {
 
     return (
         <div className="activityInfo">
-            <div style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between' }}>
+            <div className='titreactivityinfo' style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', justifyContent: 'space-between' }}>
                 <span style={{ color: 'black', fontFamily: 'Roboto', fontSize: '15px', fontWeight: 'bold' }}>Durée moyenne des sessions</span>
                 <CustomLegend />
             </div>
@@ -93,17 +93,19 @@ const ActivityInfo = ({ activity }) => {
 
 const CustomLegend = () => (
     <div style={{ display: 'flex', alignItems: 'center' }}>
-        <span style={{ color: '#000000', marginRight: '10px', display: 'flex', alignItems: 'center' }}>
-            <svg height="10" width="10">
-                <circle cx="5" cy="5" r="5" fill="#000000" />
+             <span style={{ color: 'black', fontFamily: 'Roboto', fontSize: '15px', fontWeight: 'bold',display:'flex',flexDirection:'row', justifyContent:'space-between',alignItems:'center' }}>
+            
+            <svg height="10" width="10" style={{ marginRight: '5px' }}>
+                <circle cx="4" cy="4" r="4" fill="#000000"  />
             </svg>
-            Poids (kg)
+             Poids (kg)
         </span>
-        <span style={{ color: '#FF0000', display: 'flex', alignItems: 'center' }}>
-            <svg height="10" width="10">
-                <circle cx="5" cy="5" r="5" fill="#FF0000" />
+        <span style={{marginLeft:10, color: 'black', fontFamily: 'Roboto', fontSize: '15px', fontWeight: 'bold',display:'flex',flexDirection:'row', justifyContent:'space-between',alignItems:'center',gap:'10' }}>
+            
+            <svg height="10" width="10" style={{ marginRight: '5px' }}>
+                <circle cx="4" cy="4" r="4" fill="#FF0000" />
             </svg>
-            Calories brûlées (kcal)
+             Calories brûlées (kcal)
         </span>
     </div>
 );
