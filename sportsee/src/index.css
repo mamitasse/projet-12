@@ -1,13 +1,13 @@
 body {
   min-width: 1024px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 .Home {
@@ -17,44 +17,6 @@ code {
 
 .Home h1 {
   text-align: center;
-}
-
-.Dashboard {
-  display: flex;
-  flex-direction: row;
-  margin-left: 0px;
-}
-
-.mainDashboard {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-left: 5%;
-}
-
-.graphCarre {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 500px;
-  gap: 15px;
-}
-
-.activityInfo {
-  width: 100%;
-  height: 320px;
-  gap: 0px;
-  opacity: 0px;
-  margin-bottom: 20px;
-}
-
-.activityInfo p {
-  font-family: Roboto;
-  font-size: 5px;
-  font-weight: 500;
-  line-height: 24px;
-  text-align: left;
 }
 
 .average {

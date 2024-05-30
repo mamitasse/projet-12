@@ -1,6 +1,5 @@
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Rectangle } from 'recharts';
 
 const dayLabels = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
 
@@ -26,26 +25,40 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-const AverageSessionsInfo = ({ averageSessions }) => {
-  console.log("Average Sessions Info:", averageSessions);
+const CustomCursor = ({ points, width, height }) => {
+  if (!points || points.length === 0) return null;
+  const { x } = points[0];
+  return (
+    <Rectangle
+      fill="rgba(255, 0, 0, 0.8)"
+      x={x}
+      y={0}
+      width={width - x}
+      height="100%"
+    />
+  );
+};
 
+const AverageSessionsInfo = ({ averageSessions }) => {
   if (!averageSessions || !averageSessions.length) {
     return <p>Les sessions moyennes ne sont pas disponibles.</p>;
   }
 
-  // Créer une nouvelle liste avec les jours formatés
   const formattedSessions = averageSessions.map((item, index) => ({
     ...item,
     day: dayLabels[index],
   }));
 
   return (
-    <div style={{ width: '279px', height: '283px', backgroundColor: '#FF0000', padding: '10px' }}>
-      <h2 style={{  fontFamily: 'Roboto', fontSize: '15px', fontWeight: 'bold', color: 'rgba(255, 255, 255, 0.8)' }}>
+    <div style={{ width: '279px', height: '283px', backgroundColor: '#FF0000', padding: '10px', position: 'relative',fontFamily: 'Roboto' }}>
+      <h2 style={{ fontFamily: 'Roboto', fontSize: '15px', fontWeight: 'bold', color: 'rgba(255, 255, 255, 0.8)' }}>
         Durée moyenne des <br /> sessions
       </h2>
       <ResponsiveContainer width="100%" height="80%">
-        <LineChart data={formattedSessions} margin={{ top: 0, right: 3, left: 3, bottom: 20 }}>
+        <LineChart 
+          data={formattedSessions} 
+          margin={{ top: 0, right: 3, left: 3, bottom: 20 }}
+        >
           <CartesianGrid 
             className="custom-cartesian-grid"
             strokeDasharray="3 3" 
@@ -60,23 +73,23 @@ const AverageSessionsInfo = ({ averageSessions }) => {
               fontWeight: 500,
               lineHeight: '24px',
               textAlign: 'left',
-              height:24
+              height: 24,
             }} 
             axisLine={false} 
             tickLine={false} 
-            tickM argin={1} // Add margin to ensure full visibility
-            padding={{ left: 1, right: 1 }}// Add padding to ensure visibility of first and last ticks
+            tickMargin={1} 
+            padding={{ left: 1, right: 1 }} 
           />
           <YAxis hide={true} />
           <Tooltip 
             content={<CustomTooltip />}
-            cursor={{ stroke: 'rgba(255, 0, 0, 0)', strokeWidth: 0 }} // This removes the vertical line
+            cursor={<CustomCursor width={279} height={283} />} // Set the height to the full height of the container
           />
           <Line
             type="monotone"
             dataKey="sessionLength"
             stroke="rgba(200, 200, 200, 0.8)"
-            strokeWidth={3}  // Increase the thickness of the line
+            strokeWidth={3} 
             dot={false}
             activeDot={{ r: 8, stroke: '#ffffff', fill: '#ffffff' }}
           />

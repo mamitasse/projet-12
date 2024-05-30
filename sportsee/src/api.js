@@ -2,7 +2,7 @@ import axios from 'axios';
 import data from './data.json';
 
 const BASE_URL = 'http://localhost:3000'; // Remplacez cette URL par celle de votre backend
-const USE_LOCAL_DATA = true; // Changez cette valeur pour utiliser les données locales ou l'API
+const USE_LOCAL_DATA = false; // Changez cette valeur pour utiliser les données locales ou l'API
 
 const getUserById = async (id) => {
     if (USE_LOCAL_DATA) {
