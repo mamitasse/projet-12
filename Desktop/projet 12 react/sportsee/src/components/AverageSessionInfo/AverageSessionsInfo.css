@@ -1,0 +1,10 @@
+tooltipBlanc{
+    font-family: 'roboto';
+    font-size: 20px;
+}
+
+.averageDiv{
+    font-size: rem(14);
+    position: relative;
+    background-color: #FF0000;
+}
