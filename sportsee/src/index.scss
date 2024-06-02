@@ -1,0 +1,64 @@
+body {
+  min-width: 1024px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.Home {
+  display: flex;
+  flex-direction: row;
+  h1 {
+    text-align: center;
+  }
+}
+
+.average {
+  h2 {
+    font-family: Roboto;
+    font-size: 5px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+  }
+  margin-top: 30px;
+}
+.headerDashboard {
+  p {
+    margin-left: 0px;
+  }
+}
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media (max-width: 1263px) {
+    flex-direction: column;
+  }
+}
+.resultat-item {
+  display: flex;
+  flex-direction: row;
+}
+.resultat-info {
+  @media (max-width: 1060px) {
+    display: flex;
+  }
+}
+ul {
+  padding: 0px;
+}
+.titreactivityinfo {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

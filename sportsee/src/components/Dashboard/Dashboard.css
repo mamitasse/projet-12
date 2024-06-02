@@ -1,0 +1,22 @@
+.Dashboard {
+  display: flex;
+  flex-direction: row;
+
+  margin-left: 0px;
+}
+
+.mainDashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 5%;
+ 
+}
+.graphCarre {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 500px;
+  gap: 15px;
+}

@@ -1,0 +1,52 @@
+.aside-nav-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background: #020203; 
+    width: 117px;
+  
+  
+  }
+  
+  @media (max-width: 1340px) {
+    .aside-nav-container {
+     
+      list-style-type: none;
+    }
+  }
+  
+  .activities-list {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
+    list-style-type: none;
+    height: 100%;
+  }
+  
+  .activity-picto {
+    padding:20px
+  }
+  
+  .disclaimer {
+    display: flex;
+    align-items: center;
+
+    font-size: 0.8rem;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+  
+  @media (max-width: 1340px) {
+    .disclaimer {
+     
+      font-family: Roboto;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: left;
+    }
+  }
+  
