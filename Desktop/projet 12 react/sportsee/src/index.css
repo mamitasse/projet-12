@@ -16,16 +16,17 @@ code {
 
 .Home h1 {
   text-align: center;
-}
+ 
+    font-family: Roboto;
+    font-size: 5px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 30px;
+  }
+  
 
-.average h2 {
-  font-family: Roboto;
-  font-size: 5px;
-  font-weight: 500;
-  line-height: 24px;
-  text-align: left;
-  margin-top: 30px;
-}
+
 
 .headerDashboard p {
   margin-left: 0px;

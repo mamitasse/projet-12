@@ -14,7 +14,8 @@ const ScoreInfo = ({ score }) => {
   const COLORS = ['#FF0000', '#EEEEEE']; // Rouge pour le score, gris pour le reste
 
   return (
-    <div className="score-info" style={{ borderRadius: '7px', width: '258px', height: '263px', position: 'relative', backgroundColor: '#FBFBFB',padding:'15' }}>
+    <div className="score-info" style={{ borderRadius: '7px', width: '258px', height: '263px', position: 'relative', backgroundColor: '#FBFBFB',padding:'15',boxShadow: '0px 2px 4px 0px rgba(0, 0, 0, 0.0212)'
+  }}>
       <p style={{ position: 'absolute', top: '5%', left: '8%', transform: 'translate(-50%, -50%)', fontWeight: '600' }}>Score</p>
       <ResponsiveContainer width="100%" height="100%">
         <PieChart>

@@ -4,21 +4,26 @@
 
   margin-left: 0px;
 }
+.headerDashboard p{
+  margin-bottom: 20px;
+}
 
 .mainDashboard {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin-left: 10px;
+ 
  
 }
 .graphCarre {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   height: 350px;
   gap: 15px;
+  margin-left: 20px;
+  width: 100%;
+  
 }
 .info{
   display: flex;
@@ -28,12 +33,12 @@
   margin: 0px;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1249px) {
   .info{
     flex-direction: column;
-    
-  }
+    }
   .resultat-info{
     flex-direction: row;
+    width: 100%;
   }
 }

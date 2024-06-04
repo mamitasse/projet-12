@@ -8,3 +8,12 @@ tooltipBlanc{
     position: relative;
     background-color: #FF0000;
 }
+.average h2 {
+    font-family: Roboto;
+    font-size: 5px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    margin-top: 30px;
+  }
+  
