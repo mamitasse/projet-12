@@ -1,5 +1,3 @@
-// src/hooks/useFetchUserData.jsx
-
 import { useEffect, useState } from "react";
 import {
   getUserById,
@@ -24,6 +22,10 @@ const useFetchUserData = (userId) => {
         console.log("Fetching user data...");
         const userResponse = await getUserById(Number(userId));
         console.log("User data:", userResponse.data);
+
+        if (!userResponse.data || !userResponse.data.userInfos) {
+          throw new Error("Invalid user data");
+        }
 
         console.log("Fetching activity data...");
         const activityResponse = await getUserActivityById(Number(userId));
